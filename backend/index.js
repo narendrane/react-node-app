@@ -29,15 +29,7 @@ app.use(bodyParser.json());
 app.use("/api/v1/workouts", v1WorkoutRouter);
 
 //MongoDB Connection
-const connectToMongo = async () => {
-    await mongoose.connect('mongodb+srv://admin:admin@myfirstdb.zrlaq2i.mongodb.net/',{
-        dbName: 'sample_mflix',
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    });
-    console.log("Connected to MongoDB");
-  };
-connectToMongo();
+
 
 const UserSchema = new mongoose.Schema({
 	name: {
@@ -55,8 +47,6 @@ const UserSchema = new mongoose.Schema({
 	},
 });
 
-const User = mongoose.model('users', UserSchema);
-User.createIndexes();
 
 app.get("/", (req, resp) => {
 
