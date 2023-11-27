@@ -1,5 +1,5 @@
 
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 
 // For backend and express
 const express = require("express");
@@ -30,7 +30,7 @@ app.use("/api/v1/workouts", v1WorkoutRouter);
 
 //MongoDB Connection
 
-
+/* 
 const UserSchema = new mongoose.Schema({
 	name: {
 		type: String,
@@ -45,7 +45,7 @@ const UserSchema = new mongoose.Schema({
 		type: Date,
 		default: Date.now,
 	},
-});
+}); */
 
 
 app.get("/", (req, resp) => {
