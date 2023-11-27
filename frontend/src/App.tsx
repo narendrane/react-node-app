@@ -10,7 +10,7 @@ import {Counter} from './Counter'
 const App = () => { 
 	const [data, setData] = useState<any>([]); 
   const [users, setUsers] = useState<any>(); 
-/* 	useEffect(() => { 
+ 	useEffect(() => { 
 		axios.get('http://localhost:5000/api/products').then( 
 			response => { 
 				setData(response.data); 
@@ -18,7 +18,7 @@ const App = () => {
 		).catch(error => { 
 			console.error(error); 
 		}) 
-	}, []) 
+	}, []) /*
 	useEffect(() => { 
 		axios.get('http://localhost:5000/api/users').then( 
 			response => { 
@@ -30,9 +30,9 @@ const App = () => {
 	}, [])  */
 	return ( 
 		<div className="App"> 
-    <Arithmetic/>
+{/*     <Arithmetic/>
 	<Counter/>
-{/*     <RenderClick />
+    <RenderClick /> */}
     <CounterContext />
 			{ 
 				<div className='products'> 
@@ -65,7 +65,7 @@ const App = () => {
               </div> 
       }
       
-      <Register/> */}
+      <Register/>
 		</div> 
 	); 
 } 
