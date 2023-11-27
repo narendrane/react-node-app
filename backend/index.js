@@ -4,6 +4,7 @@
 // For backend and express
 const express = require("express");
 const bodyParser = require("body-parser");
+const ErrorHandler = require("./src/ErrorHandler.js");
 
 const apicache = require("apicache");
 const v1WorkoutRouter = require("./src/routes/workoutRoutes");
@@ -85,7 +86,7 @@ app.post("/register", async (req, resp) => {
 		resp.send("Something Went Wrong");
 	}
 });
-
+app.use(ErrorHandler);
 app.listen(PORT, () => {  
     console.log('Server started on port 5000');  
     logger.info('INFO message : Server started on port 5000');
